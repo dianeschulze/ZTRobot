@@ -1,0 +1,64 @@
+<html>
+<head>
+	<title> ZT Robot </title>
+</head>
+<body>
+	<hl> Welcome </h1>
+
+	
+	<p>
+	<button type = "button" onclick = "downButton()">	
+	<img name = "downarrow" src = "arrow483.png" alt="Down Arrow" style = "width:100px;height:100px">
+	</button>
+
+	<button type = "button" onclick = "leftButton()">
+	<img name = "leftarrow" src = "arrowhead7.png" alt="Left Arrow" style = "width:100px;height:100px">
+	</button>
+
+	<button type = "button" onclick = "rightButton()">
+	<img name = "rightarrow" src = "arrow487.png" alt="Right Arrow" style = "width:100px;height:100px">
+	</button>
+	
+	</p>
+
+	<!-- Begin Fresh Tilled Soil Video Chat Embed Code -->
+<div id="freshtilledsoil_embed_widget" class="video-chat-widget"></div>
+<script id="fts" src="http://freshtilledsoil.com/embed/webrtc-v5.js?r=FTS0316-CZ6NqG97"></script>
+<!-- End Fresh Tilled Soil Video Chat Embed Code -->
+
+	<p id = "demo"> ARROW KEYS </p>
+	<script language = 'JavaScript'>
+	function rightButton(){
+		document.getElementById("demo").innerHTML = "right button";
+	}
+	function leftButton(){
+		document.getElementById("demo").innerHTML = "left button";
+	}
+	function downButton(){
+		document.getElementById("demo").innerHTML = "down button";
+	}
+
+	document.onkeydown = function checkKey(e){
+		e = e || window.event;
+		if (e.keyCode == '38'){
+			//up arrow
+			document.getElementById("demo").innerHTML = "up key";
+		}
+		else if (e.keyCode == '40'){
+			//down arrow
+			document.getElementById("demo").innerHTML = "down key";		}
+		else if (e.keyCode == '39'){
+			//right arrow
+			document.getElementById("demo").innerHTML = "right key";
+		}
+		else if (e.keyCode == '37'){
+			//left arrow
+			document.getElementById("demo").innerHTML = "left key";
+		}
+	}
+		</script>
+
+
+	</body>
+</html>
+
